@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Herramientas - Ferretería Emanuel</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Ferretería Emanuel</h1>
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="herramientas.html">Herramientas</a>
+  <a href="materiales.html">Materiales</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+  </header>
+
+  <section id="ofertas" class="seccion-ofertas">
+    <h2>🔥 Ofertas de la Semana</h2>
+    <div class="productos">
+      <div class="producto oferta herramientas">
+        <img src="imagenes/martillo.jpg" alt="Martillo en oferta">
+        <h3>Martillo</h3>
+        <p><span class="precio-original">35 Bs</span> <strong>25 Bs</strong></p>
+      </div>
+      <div class="producto oferta herramientas">
+        <img src="imagenes/pala.jpg" alt="Pala en oferta">
+        <h3>Pala</h3>
+        <p><span class="precio-original">60 Bs</span> <strong>50 Bs</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="buscador-container">
+  <input type="text" id="buscador" placeholder="Buscar productos..." oninput="filtrarProductos()" />
+</div>
+
+  <main>
+    <h2 id="productos" style="text-align:center; color:#e65100;">🧱 Nuestros productos</h2>
+
+<div class="productos">
+  <div class="producto herramientas" data-info="Martillo de acero forjado, ideal para clavos y carpintería.">
+    <img src="imagenes/martillo.jpg" alt="Martillo">
+    <h3>Martillo</h3>
+    <p>Precio: 25 Bs</p>
+    <button onclick="agregarAlCarrito('Martillo', 25, 'imagenes/martillo.jpg')">Agregar al carrito</button>
+  </div>
+
+  <div class="producto herramientas" data-info="Carretilla metálica de una rueda, ideal para transportar materiales pesados.">
+  <img src="imagenes/carretilla.jpg" alt="Carretilla">
+  <h3>Carretilla</h3>
+  <p>Precio: 180 Bs</p>
+  <button onclick="agregarAlCarrito('Carretilla', 180, 'imagenes/carretilla.jpg')">Agregar al carrito</button>
+</div>
+
+  <div class="producto herramientas" data-info="Carretilla metálica de una rueda, ideal para transportar materiales pesados.">
+  <img src="imagenes/taladro2.jpeg" alt="Taladro">
+  <h3>Taladro</h3>
+  <p>Precio: 250 Bs</p>
+  <button onclick="agregarAlCarrito('Taladro', 180, 'imagenes/taladro2.jpeg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Pala de acero resistente, perfecta para cavar y mezclar materiales.">
+  <img src="imagenes/pala.jpg" alt="Pala">
+  <h3>Pala</h3>
+  <p>Precio: 50 Bs</p>
+  <button onclick="agregarAlCarrito('Pala', 50, 'imagenes/pala.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Picota con punta doble para romper suelos duros o rocas.">
+  <img src="imagenes/picota.jpg" alt="Picota">
+  <h3>Picota</h3>
+  <p>Precio: 70 Bs</p>
+  <button onclick="agregarAlCarrito('Picota', 70, 'imagenes/picota.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Destornillador de punta plana, útil para ajustes domésticos.">
+  <img src="imagenes/destornillador.jpg" alt="Destornillador">
+  <h3>Destornillador</h3>
+  <p>Precio: 15 Bs</p>
+  <button onclick="agregarAlCarrito('Destornillador', 15, 'imagenes/destornillador.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Alicate multiusos para cortar y sujetar alambres.">
+  <img src="imagenes/alicate.jpg" alt="Alicate">
+  <h3>Alicate</h3>
+  <p>Precio: 30 Bs</p>
+  <button onclick="agregarAlCarrito('Alicate', 30, 'imagenes/alicate.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Llave inglesa ajustable para trabajos de plomería.">
+  <img src="imagenes/llaveinglesa.jpg" alt="Llave inglesa">
+  <h3>Llave inglesa</h3>
+  <p>Precio: 30 Bs</p>
+  <button onclick="agregarAlCarrito('Llave inglesa', 30, 'imagenes/llaveinglesa.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Segueta metálica para cortar tubos, madera o plástico.">
+  <img src="imagenes/segueta.jpg" alt="Segueta">
+  <h3>Segueta</h3>
+  <p>Precio: 35 Bs</p>
+  <button onclick="agregarAlCarrito('Segueta', 35, 'imagenes/segueta.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Taladro eléctrico de 500W para perforaciones en concreto o madera.">
+  <img src="imagenes/taladro.jpg" alt="Taladro">
+  <h3>Taladro</h3>
+  <p>Precio: 450 Bs</p>
+  <button onclick="agregarAlCarrito('Taladro', 450, 'imagenes/taladro.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Cinta métrica de 5 metros con traba de seguridad.">
+  <img src="imagenes/cintametrica.jpg" alt="Cinta métrica">
+  <h3>Cinta métrica</h3>
+  <p>Precio: 25 Bs</p>
+  <button onclick="agregarAlCarrito('Cinta métrica', 25, 'imagenes/cintametrica.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Serrucho con hoja de acero, ideal para cortar madera.">
+  <img src="imagenes/serrucho.jpg" alt="Serrucho">
+  <h3>Serrucho</h3>
+  <p>Precio: 40 Bs</p>
+  <button onclick="agregarAlCarrito('Serrucho', 40, 'imagenes/serrucho.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Escuadra metálica de precisión para carpintería y albañilería.">
+  <img src="imagenes/escuadra.jpg" alt="Escuadra metálica">
+  <h3>Escuadra</h3>
+  <p>Precio: 30 Bs</p>
+  <button onclick="agregarAlCarrito('Escuadra', 30, 'imagenes/escuadra.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Nivel de mano de 60cm para nivelar superficies.">
+  <img src="imagenes/nivel.jpg" alt="Nivel de mano">
+  <h3>Nivel</h3>
+  <p>Precio: 60 Bs</p>
+  <button onclick="agregarAlCarrito('Nivel', 60, 'imagenes/nivel.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Estilete retráctil con cuchilla afilada para cortes finos.">
+  <img src="imagenes/estilete.jpg" alt="Estilete">
+  <h3>Estilete</h3>
+  <p>Precio: 20 Bs</p>
+  <button onclick="agregarAlCarrito('Estilete', 20, 'imagenes/estilete.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Juego completo de llaves fijas de acero templado.">
+  <img src="imagenes/juegodellaves.jpg" alt="Juego de llaves">
+  <h3>Juego de llaves</h3>
+  <p>Precio: 200 Bs</p>
+  <button onclick="agregarAlCarrito('Juego de llaves', 200, 'imagenes/juegodellaves.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Rastrillo metálico de jardín para nivelar y recoger hojas.">
+  <img src="imagenes/rastrillo.jpg" alt="Rastrillo">
+  <h3>Rastrillo</h3>
+  <p>Precio: 50 Bs</p>
+  <button onclick="agregarAlCarrito('Rastrillo', 50, 'imagenes/rastrillo.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Sincel para picado y demolición de superficies duras.">
+  <img src="imagenes/sincel.jpg" alt="Sincel">
+  <h3>Sincel</h3>
+  <p>Precio: 30 Bs</p>
+  <button onclick="agregarAlCarrito('Sincel', 30, 'imagenes/sincel.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto herramientas" data-info="Combo o mazo de construcción con mango de madera.">
+  <img src="imagenes/combo.jpg" alt="Combo">
+  <h3>Combo</h3>
+  <p>Precio: 40 Bs</p>
+  <button onclick="agregarAlCarrito('Combo', 40, 'imagenes/combo.jpg')">Agregar al carrito</button>
+</div>
+  </div>
+  </main>
+
+  <!-- Botón para abrir carrito flotante -->
+  <button id="abrir-carrito" onclick="toggleCarrito()">🛒 Ver carrito</button>
+
+  <!-- Carrito flotante -->
+  <div id="popup-carrito" class="popup-carrito">
+    <h3>🛒 Tu carrito</h3>
+    <div id="carrito-items"></div>
+    <div class="carrito-total">Total: <span id="carrito-total">0 Bs</span></div>
+    <div class="carrito-botones">
+      <button onclick="vaciarCarrito()">🗑️ Vaciar</button>
+      <button onclick="enviarWhatsApp()">📤 Enviar por WhatsApp</button>
+      <button onclick="toggleCarrito()">❌ Cerrar</button>
+    </div>
+  </div>
+
+<!-- Sección contacto -->
+<section id="contacto" style="text-align: center; padding: 20px;">
+  <h2>Contáctanos</h2>
+  <p>¿Tienes alguna pregunta? Escríbenos directamente por WhatsApp:</p>
+  
+  <div style="display: flex; justify-content: center; margin-top: 10px;">
+    <a href="https://wa.me/59178572424" target="_blank" style="text-decoration: none;">
+      <button style="
+        background-color: #25D366;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        outline: none;
+        box-shadow: none;
+      ">
+        📱 Chatear por WhatsApp
+      </button>
+    </a>
+  </div>
+</section>
+
+<section id="sobre-nosotros" class="seccion-nosotros">
+  <h2>Sobre Nosotros</h2>
+  <p>Somos <strong>Ferretería Emanuel</strong>, una empresa local con pasión por la construcción. Ofrecemos herramientas y materiales de calidad al mejor precio. Nos ubicamos en [tu zona/localidad].</p>
+  <p>Contáctanos para pedidos especiales o ayuda personalizada.</p>
+
+  <!-- Botón de ubicación -->
+  <div style="margin-top: 15px;">
+    <a href="https://maps.app.goo.gl/gPPeUcfiseMZhucP6" target="_blank" style="text-decoration: none;">
+      <button style="
+        background-color: #e65100;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+      ">
+        📍 Ubicación
+      </button>
+    </a>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Ferretería Emanuel</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

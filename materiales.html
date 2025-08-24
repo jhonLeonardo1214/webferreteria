@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Materiales - Ferretería Emanuel</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Ferretería Emanuel</h1>
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="herramientas.html">Herramientas</a>
+  <a href="materiales.html">Materiales</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+  </header>
+
+  <section id="ofertas" class="seccion-ofertas">
+    <h2>🔥 Ofertas de la Semana</h2>
+    <div class="productos">
+      <div class="producto oferta herramientas">
+        <img src="imagenes/martillo.jpg" alt="Martillo en oferta">
+        <h3>Martillo</h3>
+        <p><span class="precio-original">35 Bs</span> <strong>25 Bs</strong></p>
+      </div>
+      <div class="producto oferta herramientas">
+        <img src="imagenes/pala.jpg" alt="Pala en oferta">
+        <h3>Pala</h3>
+        <p><span class="precio-original">60 Bs</span> <strong>50 Bs</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="buscador-container">
+  <input type="text" id="buscador" placeholder="Buscar productos..." oninput="filtrarProductos()" />
+</div>
+
+  <main>
+    <h2 id="productos" style="text-align:center; color:#e65100;">🧱 Nuestros productos</h2>
+
+<div class="productos">
+  <!-- MATERIALES -->
+<div class="producto materiales" data-info="Bolsa de cemento de 50kg marca FANCESA.">
+  <img src="imagenes/cemento.jpg" alt="Cemento">
+  <h3>Cemento</h3>
+  <p>Precio: 65 Bs</p>
+  <button onclick="agregarAlCarrito('Cemento', 65, 'imagenes/cemento.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Ladrillo cocido, ideal para muros y construcciones livianas.">
+  <img src="imagenes/ladrillo.jpg" alt="Ladrillo">
+  <h3>Ladrillo (unidad)</h3>
+  <p>Precio: 1.50 Bs</p>
+  <button onclick="agregarAlCarrito('Ladrillo', 1.5, 'imagenes/ladrillo.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Arena fina para mezclas de cemento y revoques.">
+  <img src="imagenes/arena.jpg" alt="Arena">
+  <h3>Metro cúbico de arena</h3>
+  <p>Precio: 70 Bs</p>
+  <button onclick="agregarAlCarrito('Arena', 70, 'imagenes/arena.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Grava triturada para concreto estructural y cimientos.">
+  <img src="imagenes/piedra.jpg" alt="Grava">
+  <h3>Metro cúbico de grava</h3>
+  <p>Precio: 85 Bs</p>
+  <button onclick="agregarAlCarrito('Grava', 85, 'imagenes/piedra.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Bolsa de clavos surtidos de diferentes tamaños.">
+  <img src="imagenes/clavos.jpg" alt="Clavos">
+  <h3>Bolsa de clavos</h3>
+  <p>Precio: 20 Bs</p>
+  <button onclick="agregarAlCarrito('Clavos', 20, 'imagenes/clavos.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Saco de cal hidratada para mezclas de construcción.">
+  <img src="imagenes/cal.jpg" alt="Cal">
+  <h3>Saco de cal</h3>
+  <p>Precio: 55 Bs</p>
+  <button onclick="agregarAlCarrito('Cal', 55, 'imagenes/cal.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Malla galvanizada electrosoldada para refuerzos de concreto.">
+  <img src="imagenes/malla.jpg" alt="Malla galvanizada">
+  <h3>Malla galvanizada</h3>
+  <p>Precio: 120 Bs</p>
+  <button onclick="agregarAlCarrito('Malla galvanizada', 120, 'imagenes/malla.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Yeso blanco para acabados de interiores y cielorrasos.">
+  <img src="imagenes/yeso.jpg" alt="Yeso">
+  <h3>Saco de yeso</h3>
+  <p>Precio: 45 Bs</p>
+  <button onclick="agregarAlCarrito('Yeso', 45, 'imagenes/yeso.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Tubo de PVC de 4 pulgadas, ideal para desagües.">
+  <img src="imagenes/tubopvc.jpg" alt="Tubo PVC 4''">
+  <h3>Tubo PVC 4"</h3>
+  <p>Precio: 35 Bs</p>
+  <button onclick="agregarAlCarrito('Tubo PVC', 35, 'imagenes/tubopvc.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Cemento cola ideal para pegar cerámica y porcelanato.">
+  <img src="imagenes/cementocola.jpg" alt="Cemento cola">
+  <h3>Cemento cola</h3>
+  <p>Precio: 30 Bs</p>
+  <button onclick="agregarAlCarrito('Cemento cola', 30, 'imagenes/cementocola.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Varilla corrugada de 1/4 pulgada para estructuras de concreto.">
+  <img src="imagenes/fierro.jpg" alt="Varilla de fierro">
+  <h3>Varilla de fierro 1/4"</h3>
+  <p>Precio: 43 Bs</p>
+  <button onclick="agregarAlCarrito('Varilla de fierro', 43, 'imagenes/fierro.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Teja colonial de barro cocido, ideal para techos rústicos.">
+  <img src="imagenes/teja.jpg" alt="Teja">
+  <h3>Teja colonial</h3>
+  <p>Precio: 6 Bs</p>
+  <button onclick="agregarAlCarrito('Teja colonial', 6, 'imagenes/teja.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Sika impermeabilizante para terrazas y techos, balde de 18 litros.">
+  <img src="imagenes/zika.jpg" alt="Balde de sika">
+  <h3>Balde de sika impermeabilizante 18L</h3>
+  <p>Precio: 140 Bs</p>
+  <button onclick="agregarAlCarrito('Balde de sika', 140, 'imagenes/zika.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Pintura látex blanca para interiores y exteriores, 18 litros.">
+  <img src="imagenes/pintura.jpg" alt="Pintura latex">
+  <h3>Pintura látex blanca 18L</h3>
+  <p>Precio: 180 Bs</p>
+  <button onclick="agregarAlCarrito('Pintura látex blanca', 180, 'imagenes/pintura.jpg')">Agregar al carrito</button>
+</div>
+
+<div class="producto materiales" data-info="Silicona selladora transparente para juntas y ventanas.">
+  <img src="imagenes/silicona.jpg" alt="Silicona">
+  <h3>Silicona selladora</h3>
+  <p>Precio: 28 Bs</p>
+  <button onclick="agregarAlCarrito('Silicona selladora', 28, 'imagenes/silicona.jpg')">Agregar al carrito</button>
+</div>
+</div>
+</main>
+
+  <!-- Botón para abrir carrito flotante -->
+  <button id="abrir-carrito" onclick="toggleCarrito()">🛒 Ver carrito</button>
+
+  <!-- Carrito flotante -->
+  <div id="popup-carrito" class="popup-carrito">
+    <h3>🛒 Tu carrito</h3>
+    <div id="carrito-items"></div>
+    <div class="carrito-total">Total: <span id="carrito-total">0 Bs</span></div>
+    <div class="carrito-botones">
+      <button onclick="vaciarCarrito()">🗑️ Vaciar</button>
+      <button onclick="enviarWhatsApp()">📤 Enviar por WhatsApp</button>
+      <button onclick="toggleCarrito()">❌ Cerrar</button>
+    </div>
+  </div>
+
+<!-- Sección contacto -->
+<section id="contacto" style="text-align: center; padding: 20px;">
+  <h2>Contáctanos</h2>
+  <p>¿Tienes alguna pregunta? Escríbenos directamente por WhatsApp:</p>
+  
+  <div style="display: flex; justify-content: center; margin-top: 10px;">
+    <a href="https://wa.me/59178572424" target="_blank" style="text-decoration: none;">
+      <button style="
+        background-color: #25D366;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        outline: none;
+        box-shadow: none;
+      ">
+        📱 Chatear por WhatsApp
+      </button>
+    </a>
+  </div>
+</section>
+
+<section id="sobre-nosotros" class="seccion-nosotros">
+  <h2>Sobre Nosotros</h2>
+  <p>Somos <strong>Ferretería Emanuel</strong>, una empresa local con pasión por la construcción. Ofrecemos herramientas y materiales de calidad al mejor precio. Nos ubicamos en [tu zona/localidad].</p>
+  <p>Contáctanos para pedidos especiales o ayuda personalizada.</p>
+
+  <!-- Botón de ubicación -->
+  <div style="margin-top: 15px;">
+    <a href="https://maps.app.goo.gl/gPPeUcfiseMZhucP6" target="_blank" style="text-decoration: none;">
+      <button style="
+        background-color: #e65100;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+      ">
+        📍 Ubicación
+      </button>
+    </a>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Ferretería Emanuel</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
